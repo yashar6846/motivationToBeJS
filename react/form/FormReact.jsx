@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 export default function Forming() {
   const [form, setForm] = useState({ isim: "", sehir: "", bio: "" });
   console.log("FORM", form);
