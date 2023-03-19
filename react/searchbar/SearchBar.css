@@ -1,0 +1,19 @@
+.input-wrapper{
+    background-color: azure;
+    width: 100%;
+    border-radius: 10px;
+    height: 2.25rem;
+    padding: 0.15px;
+    box-shadow: opx opx 8px #ddd;
+    display: flex;
+    align-items: center;
+}
+
+input{
+ background-color: transparent;
+ border: none;
+ height: 100%;
+ font-size: 1.25rem;
+ width: 100%;
+ margin-left: 5px;
+}
