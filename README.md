@@ -1,2 +1,3 @@
 # motivationtobejs
-#Various exercises to learn JavaScript better 17March
+# Various exercises to learn JavaScript better /17March
+# 

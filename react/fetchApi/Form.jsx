@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios'
 
-function Fetcingapi() {
+function Fetcingapi({search}) {
 const [countres, setCountres]=useState([])
   // useEffect(()=>{
   //   fetch("https://restcountries.com/v3.1/all")
@@ -20,7 +20,8 @@ const [countres, setCountres]=useState([])
    <div className='App'>
    <h1> i start proctice </h1>
   {
-    countres.map(item=>{
+    countres.filter(counte=> counte.capital.toLowerCase().includes(search.toLowerCase()))
+    .map(item=>{
      return(<div key={item.id}> 
      <h2>{item.capital}</h2>
 
