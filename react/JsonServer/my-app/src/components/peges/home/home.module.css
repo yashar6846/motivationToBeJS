@@ -1,0 +1,15 @@
+.homeWraper{
+
+}
+.homeWraper h2{
+    /* text-align: left; */
+    margin-top: 40px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+.articles{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
