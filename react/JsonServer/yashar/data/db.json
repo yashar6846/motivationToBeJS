@@ -27,6 +27,18 @@
                 "imageurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWi__F-8NnoAMKq3TjwgG-Brqt8CB99WYxesoTqAKDJfZHVqWKD51u6f38TBlYKH6-ogY&usqp=CAU",
                 "title":"the fourth",
                 "readingTime": 8
+            },
+            {
+                "id":5,
+                "imageurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZVELl1vUbrF2otFs-DpjKHdNzl7Sb46XuLBVMEdF1OAHmRrBi81GCFz2GtQNZBs-2SUo&usqp=CAU",
+                "title":"Third",
+                "readingTime": 12
+            },
+            {
+                "id":6,
+                "imageurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWi__F-8NnoAMKq3TjwgG-Brqt8CB99WYxesoTqAKDJfZHVqWKD51u6f38TBlYKH6-ogY&usqp=CAU",
+                "title":"the fourth",
+                "readingTime": 8
             }
         ]
     }

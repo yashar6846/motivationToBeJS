@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./navbar.module.css"
 
-export const Navbar=()=>{
-    let title="WebQashqai"
+export const Navbar=({title})=>{
+   
     return(
         <div className={styles.navbarWraper}>
         <div className="countainer">
