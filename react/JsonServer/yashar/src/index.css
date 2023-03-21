@@ -21,3 +21,7 @@ padding: 0;
 .countainer{
   padding: 0 160px;
 }
+a{
+  text-decoration: none;
+  color: inherit;
+}
