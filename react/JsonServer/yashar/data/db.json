@@ -1,32 +1,41 @@
 {
-    "articles":{
-        "status":true,
-        "message":"success",
-
-        "data":[
+    "articles":
+       [
             {
                 "id":1,
                 "imageurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIYXtxLpZf-WNw6PYGx6JgXb0GqGweOFOuYOlftBVcj7HInCU0z6Lkvr2wWshD2vnVTvM&usqp=CAU",
                 "title":"the first",
-                "readingTime": 7
+                "readingTime": 7,
+                "date":"11/4/2022",
+                "author":"Ngar nany",
+                "content":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, delectus aspernatur. Illum consectetur dolorum, earum ex ipsa modi delectus vel provident ratione quod doloribus quos ullam animi iusto, aperiam beatae?"
             },
             {
                 "id":2,
                 "imageurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfZCp3jdAufflppsYtZ1WVIMc1xsEhwZNKWmDSnXq7H2ArUKEqeH8m2kidaBKACze_8JY&usqp=CAU",
                 "title":"The second",
-                "readingTime": 23
+                "readingTime": 23,
+                "date":"11/5/2020",
+                "author":"JAN JANY",
+                "content":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, delectus aspernatur. Illum consectetur dolorum, earum ex ipsa modi delectus vel provident ratione quod doloribus quos ullam animi iusto, aperiam beatae?"
             },
             {
                 "id":3,
                 "imageurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZVELl1vUbrF2otFs-DpjKHdNzl7Sb46XuLBVMEdF1OAHmRrBi81GCFz2GtQNZBs-2SUo&usqp=CAU",
                 "title":"Third",
-                "readingTime": 12
+                "readingTime": 12,
+                "date":"20/3/2023",
+                "author":"GEZAL ",
+                "content":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, delectus aspernatur. Illum consectetur dolorum, earum ex ipsa modi delectus vel provident ratione quod doloribus quos ullam animi iusto, aperiam beatae?"
             },
             {
                 "id":4,
                 "imageurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWi__F-8NnoAMKq3TjwgG-Brqt8CB99WYxesoTqAKDJfZHVqWKD51u6f38TBlYKH6-ogY&usqp=CAU",
                 "title":"the fourth",
-                "readingTime": 8
+                "readingTime": 8,
+                "date":"21/3/2023",
+                "author":"yashar QASHQAI",
+                "content":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, delectus aspernatur. Illum consectetur dolorum, earum ex ipsa modi delectus vel provident ratione quod doloribus quos ullam animi iusto, aperiam beatae?"
             },
             {
                 "id":5,
@@ -41,5 +50,5 @@
                 "readingTime": 8
             }
         ]
-    }
+    
 }
