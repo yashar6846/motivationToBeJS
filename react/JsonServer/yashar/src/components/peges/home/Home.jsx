@@ -15,7 +15,7 @@ export const Home=()=>{
         .then((res)=>{
             setArticles(res.data)
         })
-        .catch(error=>{console.log(error);})
+        .catch(error=>{console.log(error)})
     },[])
   
     return(
@@ -25,7 +25,7 @@ export const Home=()=>{
             <h2>NewCounter</h2>
             <div className={styles.articles}>
             {articles.map((article)=>(
-               <Link to={`/contant/${articles.id}`}>
+               <Link to={`/article/${article.id}`}>
                 <Article key={article.id} article={article}/>
                </Link>
                 ))}
@@ -37,3 +37,37 @@ export const Home=()=>{
      
     )
 }
+
+
+
+
+  
+
+// import React, { useEffect, useState } from "react";
+// import { useParams } from "react-router-dom";
+
+// import styled from "./articlePahes.module.css";
+// import axios from "axios";
+
+// import { Navbar } from "../../navbar/Navbar";
+
+// const ArticlePage = () => {
+//   const prams = useParams();
+//   const [article, setArticle] = useState({});
+//   const [isLoding, setIsLoding] = useState(false);
+//   useEffect(() => {
+//     setIsLoding(true);
+//     axios
+//       .get(`http://localhost:2000/articles/${prams.id}`)
+//       .then((resulte) => {
+//         setArticle(resulte.data);
+//         setIsLoding(false);
+//       })
+//       .catch((error) => {
+//         console.log(error);
+//         setIsLoding(false);
+//       });
+//   }, []);
+
+
+// export default ArticlePage;
