@@ -50,31 +50,5 @@ export const Home=()=>{
 
   
 
-// import React, { useEffect, useState } from "react";
-// import { useParams } from "react-router-dom";
-
-// import styled from "./articlePahes.module.css";
-// import axios from "axios";
-
-// import { Navbar } from "../../navbar/Navbar";
-
-// const ArticlePage = () => {
-//   const prams = useParams();
-//   const [article, setArticle] = useState({});
-//   const [isLoding, setIsLoding] = useState(false);
-//   useEffect(() => {
-//     setIsLoding(true);
-//     axios
-//       .get(`http://localhost:2000/articles/${prams.id}`)
-//       .then((resulte) => {
-//         setArticle(resulte.data);
-//         setIsLoding(false);
-//       })
-//       .catch((error) => {
-//         console.log(error);
-//         setIsLoding(false);
-//       });
-//   }, []);
 
 
-// export default ArticlePage;
