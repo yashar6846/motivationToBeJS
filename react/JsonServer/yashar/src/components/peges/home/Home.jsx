@@ -8,14 +8,18 @@ import { Link } from "react-router-dom";
 
 export const Home=()=>{
     const [articles,setArticles]=useState([])
+    const[isLoding, setIsLoding]=useState(false)
 
     useEffect(()=>{
+     setIsLoding(true)
         axios
         .get(`http://localhost:2000/articles`)
         .then((res)=>{
             setArticles(res.data)
+            setIsLoding(false)
         })
         .catch(error=>{console.log(error)})
+        setIsLoding(false)
     },[])
   
     return(
@@ -23,13 +27,16 @@ export const Home=()=>{
             <Navbar title="WebQashqai"/>
             <div className="countainer">
             <h2>NewCounter</h2>
-            <div className={styles.articles}>
-            {articles.map((article)=>(
-               <Link to={`/article/${article.id}`}>
-                <Article key={article.id} article={article}/>
-               </Link>
-                ))}
-            </div>
+            {
+                isLoding ? (<p>isLodingePages...</p>):(
+                    <div className={styles.articles}>
+                    {articles.map((article)=>(
+                       <Link to={`/article/${article.id}`}>
+                        <Article key={article.id} article={article}/>
+                       </Link>
+                        ))}
+                    </div>
+                )}
             </div>
             <Foter />
             
