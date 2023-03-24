@@ -11,7 +11,7 @@ export const Contact=()=>{
       id: 7,
       title: "",
       date:  "",
-      author: "",
+      other: "",
       readingTime: "",
       message: "",
       imageurl:""
@@ -36,7 +36,7 @@ export const Contact=()=>{
     title: nowArticle.title,
     readingTime: nowArticle.readingTime,
     date:  nowArticle.date,
-    author: nowArticle.author,
+    other: nowArticle.other,
     content: nowArticle.message,
     imageurl: nowArticle.imageurl
    })
@@ -65,7 +65,7 @@ export const Contact=()=>{
 
                 <div className={styled.inputWrapper}>
                 <label>Author</label>
-                <input name='author' type="text" onChange={handleChange} placeholder="Your Email"/>
+                <input name='other' type="text" onChange={handleChange} placeholder="Your Email"/>
                 </div>
 
 
