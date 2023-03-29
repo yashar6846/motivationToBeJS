@@ -10,7 +10,7 @@ function App() {
       <div className="ui raised very padded text container segment">
       <Routes>
       <Route exact path="/" element={<YazyListese/>}/>
-      <Route exact path="/posts/:id" element={<YazyDetay/>}/>
+      {/* <Route exact path="/posts/:id" element={<YazyDetay/>}/> */}
       </Routes>
       </div>
       </div>
