@@ -37,6 +37,7 @@ export const Form =()=>{
           <input type="text" ref={imageurl} />
           <br/>
           <button onClick={addAllHendler}>Add</button>
+          
         </div>
     )
 }
