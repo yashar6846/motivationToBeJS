@@ -4,13 +4,13 @@ import {  useNavigate, useParams } from "react-router-dom"
 import { Navbar } from "../../navbar/Navbar"
 import { UPDATE_NowAll } from "../form/allMutation"
 import { GET_DaById } from "./dataQuery"
-export const EditToy=()=>{
 
+export const EditToy=()=>{
     const name = useRef("")
     const price = useRef("")
     const imageurl = useRef("")
     
-    const{id}= useParams()
+   const{id}= useParams()
    const{data}= useQuery(GET_DaById,{
         variables: {
             id: Number(id),

@@ -1,4 +1,4 @@
-import { useMutation } from "@apollo/client"
+import { gql, useMutation } from "@apollo/client"
 import { useRef } from "react"
 import { useNavigate } from "react-router-dom"
 import { Navbar } from "../../navbar/Navbar"
@@ -18,6 +18,28 @@ export const Form =()=>{
                name: name.current.value,
                price: Number(price.current.value),
                imageurl: imageurl.current.value
+            },
+            update(cache,{data:{updateDatum}}){
+                cache.modify({
+                 fields:{
+                    allData(existingData =[],{readField}){
+                        existingData = existingData.filter(toy => readField("id",toy)!==updateDatum.id)
+
+                        const newToyRef = cache.writeFragment({
+                            data: updateDatum,
+                            fragment: gql`
+                            fragment newDatum on Datum{
+                                id
+                                name
+                               price
+                               imageurl
+                            }
+                          `
+                        })
+                        return [...existingData,newToyRef]
+                    }
+                 }   
+                })
             }
         }).then(()=>{
             naviagate('/')
