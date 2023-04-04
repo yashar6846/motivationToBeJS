@@ -1,17 +1,33 @@
-import {useHistory,  useParams } from "react-router-dom"
+import { useNavigate,  useParams } from "react-router-dom"
 import { useFatch } from "../home/useFatch"
 import axios from "axios"
 
 export const Artikl=()=>{
   const param = useParams()
+
   const{data:blog,isPending,error}=useFatch(`http://localhost:2080/posts/${param.id}`)
-//   let history = useHistory();
+
+  const naviget =useNavigate()
   const handeleDelete=()=>{
     axios(`http://localhost:2080/posts/${blog.id}`,{
         method:"DELETE",
     }).then(()=>{
-        // history.push("/home");
+        naviget("/");   
     })
+  }
+  
+  const updateBlog=()=>{
+    // blog.done = !blog.done
+    //  const blog ={name,imageurl}
+    axios(`http://localhost:2080/posts/${blog.id}`,{
+    method:"PUT",
+    headers:{"Content-type": "application/json"
+    },
+    body: JSON.stringify(blog)
+   }).then(()=>{
+    console.log('blog updated');
+    naviget('/contact')
+   })
   }
     return(
         <>
@@ -24,7 +40,8 @@ export const Artikl=()=>{
                 <div><img src={blog.imageurl}/></div>
                 <div>{blog.price}</div>
                  <p>{blog.body}</p>
-                 <button onClick={handeleDelete}>Delete</button>
+                 <button onClick={()=>handeleDelete(blog.id)}>Delete</button>
+                 <button onClick={()=> updateBlog(blog.id)}>{blog.id}update</button>
             </article>
         )}
         </>

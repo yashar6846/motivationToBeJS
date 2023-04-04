@@ -1,11 +1,11 @@
 import { useState } from "react"
-import {useHistory} from "react-router"
+import {useNavigate} from "react-router-dom"
 export const Contact=()=>{
  const[name,setName]=useState()
  const[imageurl,setImageurl]=useState()
  const[author,setAuthor]=useState()
  const[ispandings,setIspandings]=useState(false)
-//  const history = useHistory()
+  const navigate=  useNavigate()
 
  const handleSubmit =(e)=>{
     e.preventDefault()
@@ -17,7 +17,7 @@ export const Contact=()=>{
         body: JSON.stringify(blog)
     }).then(()=>{
         console.log('new post received');
-        // history.push('/')
+        navigate('/')
     })
  }
     return(
@@ -40,8 +40,8 @@ export const Contact=()=>{
                 onChange = {(e) => setImageurl(e.target.value)}
                 />
                 </div> 
-            {ispandings&& <button>Submit</button>}
-            {!ispandings&& <button>is nat Submit</button>}
+            {!ispandings&& <button>Submit</button>}
+            {ispandings&& <button>is nat Submit</button>}
         </form>        
         </>
     )
