@@ -5,6 +5,7 @@ import { Navbar } from './components/navbar/Navbar';
 import { Contact } from './components/pages/contact/Contact';
 import { About } from './components/pages/about/About';
 import { Artikl } from './components/pages/home/Artikle';
+ import { UpdatePost } from './components/pages/home/UpdatePost';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route exact path='/contact' element={<Contact/>} />
       <Route  exact path="/about" element={<About/>} />
       <Route  exact path="/article/:id" element={<Artikl/>} />
+      {/* <Route  exact path="/update/:id" element={<UpdatePost />} /> */}
      </Routes>
      </BrowserRouter>
      

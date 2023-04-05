@@ -1,6 +1,7 @@
-import { useNavigate,  useParams } from "react-router-dom"
+import { Link, useNavigate,  useParams } from "react-router-dom"
 import { useFatch } from "../home/useFatch"
 import axios from "axios"
+import { useState } from "react"
 
 export const Artikl=()=>{
   const param = useParams()
@@ -18,7 +19,7 @@ export const Artikl=()=>{
   
   const updateBlog=()=>{
     // blog.done = !blog.done
-    //  const blog ={name,imageurl}
+     const blog ={name: "new name",imageurl: "new"}
     axios(`http://localhost:2080/posts/${blog.id}`,{
     method:"PUT",
     headers:{"Content-type": "application/json"
@@ -26,7 +27,7 @@ export const Artikl=()=>{
     body: JSON.stringify(blog)
    }).then(()=>{
     console.log('blog updated');
-    naviget('/contact')
+    naviget('/contact');
    })
   }
     return(
@@ -41,7 +42,8 @@ export const Artikl=()=>{
                 <div>{blog.price}</div>
                  <p>{blog.body}</p>
                  <button onClick={()=>handeleDelete(blog.id)}>Delete</button>
-                 <button onClick={()=> updateBlog(blog.id)}>{blog.id}update</button>
+                 <button  onClick={()=>updateBlog(blog.id)}>update</button>
+               
             </article>
         )}
         </>
