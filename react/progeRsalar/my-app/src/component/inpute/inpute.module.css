@@ -1,0 +1,13 @@
+.inputwrapper{
+    margin-bottom: 20px;
+   }
+   .inputwrapper label{
+      display: block;
+      margin-bottom: px;
+      /* text-align: ; */
+   }
+   .inputwrapper input{
+      width: 100%;
+      height: 20px;
+      border: 1px solid #ccc;
+   }

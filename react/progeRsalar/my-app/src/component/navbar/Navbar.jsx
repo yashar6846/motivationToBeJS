@@ -1,21 +1,29 @@
 import React from "react";
+import styled from "./navbar.module.css";
 import { Link } from "react-router-dom";
-import styles from "./navbar.module.css"
 
-export const Navbar=({title})=>{
-   
-    return(
-        <div className={styles.navbarWraper}>
-        <div className="countainer">
-            <nav className={styles.navbar}>
-                <h3>{title}</h3>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
-                </ul>
-            </nav>
+const Navbar = ({ title }) => {
+  return (
+    <div className={styled.headerWrapper}>
+      <div className="countainer">
+        <div className={styled.header}>
+          <h3>{title}</h3>
+          <ul>
+            <li>
+              <Link to="/">indexOfArticles</Link>
+            </li>
+
+            <li>
+              <Link to="/about">NewArticles</Link>
+            </li>
+            <li>
+              <Link to="/create-article">About</Link>
+            </li>
+          </ul>
         </div>
-        </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;

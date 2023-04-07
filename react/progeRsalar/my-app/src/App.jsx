@@ -1,20 +1,23 @@
-import './App.css'
-import axios from "axios"
-import {useState, useEffect} from "react"
-import { Home } from "./component/home/Home";
-import { BrowserRouter,Route, Routes } from "react-router-dom";
-import { ArticlePage } from './component/page/ArticlePage';
-import { ConterPage } from './component/home/ConterPage';
+// import "./App.css";
+import Home from "./component/pages/home/Home";
+import {BrowserRouter, Route, Routes } from "react-router-dom";
+import AboutUs from "./component/pages/aboutUs/AboutUs";
+import ArticlePage from "./component/pages/articlePage/ArticlePage";
+import CreateArticle from "./component/pages/createArticle/CreateArticle";
+import NotFound from "./component/pages/notFound/NotFound";
+
 function App() {
   return (
     <div className="App">
-   <BrowserRouter>
-   <Routes>
-    <Route path="/" element={<Home />}/>
-    <Route axact path='/articles/:id' element={<ArticlePage/>}/>
-    <Route axact path='/contact' element={<ConterPage/>}/>
-   </Routes>
-   </BrowserRouter>
+      <BrowserRouter>
+      <Routes>
+        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/article/:id" element={<ArticlePage />} />
+        <Route path="/create-article" element={<CreateArticle />} />
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }
