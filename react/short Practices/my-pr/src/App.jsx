@@ -1,11 +1,10 @@
-
 import './App.css';
-import { Weather } from './compoWeather/Weather';
+import { Weather } from './short codse/compoWeather/Weather';
 
 function App() {
   return (
     <div className="App">
-      <Weather />
+     <Weather />
     </div>
   );
 }

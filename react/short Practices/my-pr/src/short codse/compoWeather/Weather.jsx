@@ -6,6 +6,7 @@ const URL = "https://api.openweathermap.org/data/2.5/weather";
 const API_KEY = "75c10f679078c5f263f4657b9e74798e";
 
 export const Weather=()=>{
+  
  const[weather,setWeather]=useState({})
  const[city,setCity]=useState('')
 
@@ -18,10 +19,6 @@ export const Weather=()=>{
       }  
     })
     setWeather(data)
- }
- console.log(weather);
- const handelSubmite=()=>{
- 
  }
     return(
         <>
