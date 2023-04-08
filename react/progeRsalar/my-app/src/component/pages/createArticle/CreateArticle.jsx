@@ -4,6 +4,7 @@ import Navbar from "../../Navbar/Navbar";
 import Textarea from "../../textarea/Textarea";
 import styled from "./createArticle.module.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const CreateArticle = () => {
   const [articleTitle, setArticleTitle] = useState({
@@ -16,8 +17,8 @@ const CreateArticle = () => {
   });
 
   const handelChenge = (e) => {
-    setArticleTitle((prevState) => ({
-      ...prevState,
+    setArticleTitle(() => ({
+      ...articleTitle,
       [e.target.name]: e.target.value,
     }));
   };
@@ -29,15 +30,18 @@ const CreateArticle = () => {
     }));
   };
 
+   const naviget =useNavigate()
   const handlecreateNewArticle = () => {
     axios.post("http://localhost:2001/articles", {
-      id: 5,
+      // id: 12,
       title: articleTitle.title,
       readingTime: articleTitle.redingTim,
       date: articleTitle.date,
       other: articleTitle.athor,
       content: articleTitle.message,
       imageUrl: articleTitle.imageUrl,
+    }).then(() => {
+      naviget('/')
     });
   };
 

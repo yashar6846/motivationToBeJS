@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Navbar from "../../Navbar/Navbar";
 import styled from "./articlePahe.module.css";
 import axios from "axios";
@@ -9,10 +9,19 @@ const ArticlePage = () => {
   const prams = useParams();
   const [article, setArticle] = useState({});
   const [isLoding, setIsLoding] = useState(false);
+   
+ const naviget= useNavigate()
+  const handelDelete=()=>{
+  axios(`http://localhost:2001/articles/${prams.id}`,{
+    method: 'DELETE',
+  }).then(()=>{
+    naviget('/')
+  });
+  }
   useEffect(() => {
     setIsLoding(true);
     axios
-      .get(`http://localhost:2001/articles/${prams.id}`)
+      (`http://localhost:2001/articles/${prams.id}`)
       .then((resulte) => {
         setArticle(resulte.data);
         setIsLoding(false);
@@ -39,6 +48,7 @@ const ArticlePage = () => {
               </div>
               <img src={article.imageUrl} />
               <p>{article.content}</p>
+              <button onClick={handelDelete}>delete</button>
             </>
           )}
         </div>
