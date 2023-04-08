@@ -1,0 +1,94 @@
+.App {
+    display: flex;
+    background-image: url("./assets/snow.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .dock {
+    width: 35%;
+    min-height: 400px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    background-color: rgb(38, 80, 107);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h1 {
+    color: white;
+  }
+  
+  .weatherIcon {
+    background-color: rgb(12, 112, 151);
+    border-radius: 5px;
+    margin: auto;
+  }
+  
+  .name {
+    color: white;
+    font-size: large;
+    text-align: center;
+  }
+  
+  .form-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .input {
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    width: 50%;
+    padding: 20px;
+  }
+  
+  .bn632-hover {
+    width: 160px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .bn632-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .bn632-hover:focus {
+    outline: none;
+  }
+  
+  .bn632-hover.bn26 {
+    background-image: linear-gradient(
+      to right,
+      #25aae1,
+      #4481eb,
+      #04befe,
+      #3f86ed
+    );
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  }
