@@ -19,31 +19,13 @@
       "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, delectus aspernatur. Illum consectetur dolorum, earum ex ipsa modi delectus vel provident ratione quod doloribus quos ullam animi iusto, aperiam beatae?"
     },
     {
-      "id": 3,
-      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZVELl1vUbrF2otFs-DpjKHdNzl7Sb46XuLBVMEdF1OAHmRrBi81GCFz2GtQNZBs-2SUo&usqp=CAU",
-      "title": "Third",
-      "readingTime": 12,
-      "date": "20/3/2023",
-      "other": "GEZAL ",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, delectus aspernatur. Illum consectetur dolorum, earum ex ipsa modi delectus vel provident ratione quod doloribus quos ullam animi iusto, aperiam beatae?"
-    },
-    {
-      "id": 4,
-      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWi__F-8NnoAMKq3TjwgG-Brqt8CB99WYxesoTqAKDJfZHVqWKD51u6f38TBlYKH6-ogY&usqp=CAU",
-      "title": "the fourth",
-      "readingTime": 8,
-      "date": "21/3/2023",
-      "other": "yashar QASHQAI",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, delectus aspernatur. Illum consectetur dolorum, earum ex ipsa modi delectus vel provident ratione quod doloribus quos ullam animi iusto, aperiam beatae?"
-    },
-    {
       "title": "",
       "readingTime": "",
       "date": "",
       "other": "",
       "content": "",
-      "imageUrl": "https://pastatic.picsart.com/cms-pastatic/29ba24ca-480f-4fe8-938e-f3f2e28c3c4d.png",
-      "id": 9
+      "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51wwXew5Z+L._AC_UL450_SR450,320_.jpg",
+      "id": 5
     }
   ]
 }

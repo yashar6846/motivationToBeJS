@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   const [articles, setArticles] = useState([]);
   const [isLoding, setIsLoding] = useState(false);
+  const [search, setSearch] = useState("")
 
   useEffect(() => {
     setIsLoding(true);
@@ -23,25 +24,33 @@ const Home = () => {
         setIsLoding(false);
       });
   }, []);
+
+  const typingSearch=(e)=>{
+    setSearch(e.target.value);
+  }
   return (
+    <>
     <div className={styled.homeWrapper}>
       <Navbar title="yashar" />
-
       <div className="countainer">
         <h2>new articles</h2>
+        <input onChange={typingSearch} type="text" placeholder="search..."/>
+        <br />
+        <br />
         {isLoding ? (
           <p> Wite a moment...</p>
         ) : (
           <div className={styled.articles}>
-            {articles.map((item) => (
+            {articles.filter(item=>item.title.toLowerCase().includes(search.toLowerCase())).map((item) => (
               <Link to={`/article/${item.id}`}>
                 <Article key={item.id} item={item} />
-              </Link>
+               </Link>
             ))}
           </div>
         )}
       </div>
     </div>
+    </>
   );
 };
 

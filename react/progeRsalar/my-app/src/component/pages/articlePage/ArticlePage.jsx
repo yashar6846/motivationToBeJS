@@ -4,16 +4,19 @@ import Navbar from "../../Navbar/Navbar";
 import styled from "./articlePahe.module.css";
 import axios from "axios";
 import Foter from "./../../foter/Foter";
+import { Modale } from "./Modale";
 
 const ArticlePage = () => {
   const prams = useParams();
   const [article, setArticle] = useState({});
   const [isLoding, setIsLoding] = useState(false);
+  const[modal, setModal] = useState(false);
    
  const naviget= useNavigate()
   const handelDelete=()=>{
   axios(`http://localhost:2001/articles/${prams.id}`,{
     method: 'DELETE',
+    
   }).then(()=>{
     naviget('/')
   });
@@ -48,7 +51,8 @@ const ArticlePage = () => {
               </div>
               <img src={article.imageUrl} />
               <p>{article.content}</p>
-              <button onClick={handelDelete}>delete</button>
+             {modal && <Modale closeModal={handelDelete} />}
+             <button onClick={()=> setModal('true')}>Delete</button>
             </>
           )}
         </div>
