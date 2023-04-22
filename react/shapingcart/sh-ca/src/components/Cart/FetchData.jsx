@@ -21,6 +21,7 @@ export const FetchData=()=>{
             counte.map(item=> <div className={styles.meals}>
            <Card >
            <MealItem 
+           id={item.id}
             key={item.id}
              name={item.name}
              description={item.description}
