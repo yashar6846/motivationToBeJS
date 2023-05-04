@@ -3,8 +3,6 @@ import { ModaleDelete } from "../ModaleDelete"
 
 export const Modale=()=>{
    const[modale,setModale]=useState(false)
-
-   console.log(modale);
     return (
         <>
       {modale && <ModaleDelete closeModal={setModale}/>}
