@@ -8,7 +8,6 @@ export const Available = () => {
   return (
     <CartProvider>
     <div>
-    {/* <Product meals={mealsList} /> */}
     <Cart />
     {
        countres.map((item)=> {
