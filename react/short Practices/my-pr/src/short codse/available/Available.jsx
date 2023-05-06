@@ -1,40 +1,25 @@
-import React, { useEffect, useState } from 'react'
+import { Product } from './Product'
+import { Cart } from './Cart'
+import { CartProvider } from './shard/Contex'
+import { FatchData } from './fetchData'
 
 export const Available = () => {
-  const [countres, setCountres]=useState([])
-    useEffect(()=>{
-        const fatchMeals =  async() =>{
-        const res = await fetch(`http://localhost:2000/shop`)
-        const resData = await res.json()
-        
-        const loadedMeals = []
-
-        for(const key in resData){
-          loadedMeals.push({
-            id:key,
-            name:resData[key].name,
-            description:resData[key].description,
-            price:resData[key].price
-          })
-        }
-        setCountres(loadedMeals)
-        }
-       fatchMeals()
-    },[])
-  console.log(countres);
-  const mealsList =
-    countres.map((item)=> (
-      <div key={item.id}>
-      <h5>{item.name}</h5>
-      <p>{item.description}</p>
-      <p>{item.price}</p>
-    </div>
-    ))
-  
+  const{countres}=FatchData()
   return (
+    <CartProvider>
     <div>
-    {mealsList}
+    {/* <Product meals={mealsList} /> */}
+    <Cart />
+    {
+       countres.map((item)=> {
+        return <Product 
+         key={item.id}
+         name={item.name}
+         price={item.price}
+        />
+       }) 
+    }
     </div>
-    
+    </CartProvider>
   )
 }
