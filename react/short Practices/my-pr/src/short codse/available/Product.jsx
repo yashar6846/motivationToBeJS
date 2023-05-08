@@ -1,5 +1,7 @@
 import React, { useContext } from 'react'
 import { CartContex } from './shard/Contex';
+import { MealForm } from './Layout/UI/MealForm';
+
 
 export const Product = (props) => {
  const[cartItems,setCartItems]= useContext(CartContex)
@@ -11,13 +13,13 @@ export const Product = (props) => {
     })
   }
   return (
-    <div>
+    <>
       <p>{props.price}</p>
       <p>{props.name}</p>
       <button className='btn' onClick={addToCart}>
       Add
       </button>
-     
-    </div>
+      <MealForm />
+    </>
   )
 }
