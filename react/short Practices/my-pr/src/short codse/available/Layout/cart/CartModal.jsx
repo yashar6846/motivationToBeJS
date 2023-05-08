@@ -2,17 +2,34 @@ import classes from './Cart.module.css';
 import Modal from '../UI/Modal';
 import { useContext } from 'react';
 import { CartContex } from '../../shard/Contex';
+import CartItem from './CartItem';
 
 const Cart = (props) => {
 
     const [cartItems, setCartItems]=useContext(CartContex)
     const hasItem = cartItems.length > 0;
-    
+
+    const cartRemoveHandler=(id)=>{
+
+    }
+
+    const cartItemsAddHandler=(item)=>{
+  
+    }
+
     const resulte = <ul className={classes['cart-items']}>
         {cartItems.map((item)=> 
-        <li>{item.name}</li>)}
+        <CartItem
+        key={item.id}
+        name={item.name}
+        amount={item.amount}
+        price={item.price}
+        onRemove={cartRemoveHandler.bind(item.id)}
+        onAdd={()=>cartItemsAddHandler(null, item)}
+        />)}
     </ul>
     return (
+        
         <Modal onClose={props.onClose}>
             {resulte}
             <div className={classes.total}>

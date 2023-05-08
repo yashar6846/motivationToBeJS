@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react'
 import { CartContex } from './shard/Contex'
 import CartIcon from './Layout/CartIcon';
 import classes from './Layout/HeaderCartButton.module.css';
-import { Modal } from './Layout/UI/Modal';
 import CartModal from './Layout/cart/CartModal';
 
 export const Cart = () => {

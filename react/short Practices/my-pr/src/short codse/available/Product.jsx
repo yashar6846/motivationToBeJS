@@ -7,7 +7,7 @@ export const Product = (props) => {
  const[cartItems,setCartItems]= useContext(CartContex)
  
   const addToCart = () =>{
-    const product={name:props.name, price:props.price}
+    const product={name:props.name, price:props.price, amunt:props.amunt}
     setCartItems((currState)=>{
       return[...currState, product]
     })
@@ -19,7 +19,7 @@ export const Product = (props) => {
       <button className='btn' onClick={addToCart}>
       Add
       </button>
-      <MealForm />
+      {/* <MealForm /> */}
     </>
   )
 }
