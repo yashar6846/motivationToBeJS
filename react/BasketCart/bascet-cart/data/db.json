@@ -1,0 +1,46 @@
+{
+  "shop":[
+    {
+      "id": 4,
+      "name": "Apple",
+      "description": "Healthy...and green...",
+      "imageurl": "https://m.media-amazon.com/images/I/71jG+e7roXL._AC_UL800_FMwebp_QL65_.jpg",
+      "price": 18.99
+    },
+    {
+        "id": 1,
+      "name": "LaptopCanta",
+      "imageurl": "https://images-eu.ssl-images-amazon.com/images/I/717pg4GhirL._AC_UL900_SR900,600_.jpg",
+        "price": 467
+      },
+      {
+        "id": 2,
+        "name": "Lenovo",
+        "description": "A german specialty!",
+        "imageurl": "https://m.media-amazon.com/images/I/813i7tkIAEL._AC_UL800_FMwebp_QL65_.jpg",
+        "price": 16.5
+      },
+      {
+        "id": 3,
+        "name": "MacBook",
+        "description": "American, raw, meaty",
+        "imageurl": "https://m.media-amazon.com/images/I/61G7aPaHV4S._AC_UL800_FMwebp_QL65_.jpg",
+        "price": 12.99
+      },
+      {
+        "id": 5,
+        "name": "MacAir",
+        "description": "Healthy...and green...",
+        "imageurl": "https://media.istockphoto.com/id/1394763485/tr/foto%C4%9Fraf/laptop-with-blank-screen-computer-mockup-and-clipping-path-3d-render.jpg?s=612x612&w=0&k=20&c=ThHi974qn8SX9Ho8heIgT8hYuL1494dXeJpcBtirX3g=",
+        "price": 235
+      },
+      {
+        "id": 6,
+        "name": "Os",
+        "description": "Healthy...and green...",
+        "imageurl": "https://media.istockphoto.com/id/147643738/tr/foto%C4%9Fraf/notebook-with-log-in-screen.jpg?s=612x612&w=0&k=20&c=Mc2v0aCwkyvrz0g7Li877D3OukonnOpIsfFHWAC4yjI=",
+        "price": 344
+      }
+    
+]
+}
