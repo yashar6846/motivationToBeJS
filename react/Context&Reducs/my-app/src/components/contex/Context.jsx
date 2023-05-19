@@ -1,23 +1,43 @@
 import React, { createContext, useState } from 'react'
-import { Data } from '../data';
+import {data} from '../data'
 
 // import {DataFetch} from './components/DataFetch'
 
-export  const ShapingProvider= createContext()
+export const BookListShoping =createContext()
  const Context = (props) => {
-  // const {countres}=DataFetch()
-   
-  const[conter,setConter]= useState({
-    labtops: Data,
-    cart: []
+  const[state,setState] =useState({
+    bookList: data,
+    cart:[]
   })
-console.log(conter);
+  console.log(state);
+ const addToCart = book =>
+  setState({
+    ...state,
+    cart: state.cart.find(cartItem => cartItem.id === book.id)
+    ?state.cart.map(cartItem => 
+      cartItem.id === book.id
+      ?{...cartItem, count: cartItem.count + 1}
+      :cartItem):[...state.cart,{...book, count: 1}]
+  })
+
+  const removeFromCart = id => setState({...state,
+  cart: state.cart.filter(cartItem => cartItem.id !==id)})
+
+  const increment = id=> 
+    setState({...state,
+       cart: state.cart.map(cartItem => cartItem.id === id ? {...cartItem, count: cartItem.count + 1}: cartItem)
+       })
+
+       const decrement = id=> 
+        setState({...state,
+           cart: state.cart.map(cartItem => cartItem.id === id ? {...cartItem, count: cartItem.count>1 ? cartItem.count - 1: 1}: cartItem)
+           })
 
   return (
     <div>
-      <ShapingProvider.Provider value={conter}>
+      <BookListShoping.Provider value={{state: state, addToCart, increment, decrement, removeFromCart}} >
            {props.children}
-      </ShapingProvider.Provider>
+      </BookListShoping.Provider>
     
     </div>
   )
