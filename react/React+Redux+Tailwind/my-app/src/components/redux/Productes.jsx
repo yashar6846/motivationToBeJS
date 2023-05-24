@@ -19,3 +19,27 @@ export const productsDetilReducer = (state = { product:{}},action)=>{
         default: return state
     }
 }
+
+export const cardReducer = (state = {cardItems: []},action)=>{
+    switch(action.type){
+
+        case"ADD_CARD":
+        const item = action.payload
+        const existItems=state.cardItems.find(x=>x.id === item.id)
+        if(existItems){
+            return{
+                ...state,
+                cardItems: state.cardItems.map(x=>x.id===existItems.id?item: x)
+            }
+        }else{
+            return{
+                ...state,
+                cardItems:[...state.cardItems,item]
+            }
+        }
+        case "REMOVE_CARD": return{
+            cardItems: state.cardItems.filter(x=>x.id !==action.payload)
+        }
+        default: return state
+    }
+}

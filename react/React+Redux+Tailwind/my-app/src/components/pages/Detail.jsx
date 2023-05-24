@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import {useParams}from 'react-router-dom'
-import {productsActionDetail} from '../action/Action'
+import {Link, useParams}from 'react-router-dom'
+import {productsActionDetail,productsAddCard} from '../action/Action'
 import {useDispatch, useSelector} from 'react-redux'
 import {CgMathPlus,CgMathMinus} from "react-icons/cg"
 
@@ -21,6 +21,10 @@ export const Detail = () => {
       setCount(count - 1)
      }
   }
+  const addCard = ()=>{
+    dispatch(productsAddCard(id, count))
+    dispatch({type: 'DRAWER',payload: true})
+  }
   useEffect(()=>{
   dispatch(productsActionDetail(id))
   },[dispatch])
@@ -38,9 +42,10 @@ export const Detail = () => {
             <span className='text-2x1'>{count}</span>
             <CgMathPlus onClick={increment} className='cursor-pointer border rounded-full p-1' size={20}/>
           </div>
-          <button className='p-3 w-full bg-indigo-600 text-center rounded-lg text-white text-lg'>AddBasket</button>
+          <button onClick={addCard} className='p-3 w-full bg-indigo-600 text-center rounded-lg text-white text-lg'>AddBasket</button>
+          <button className=' bg-red-600 text-white '><Link to='/'>home</Link></button>
         </div>
-     
+        
     </div>
   )
 }
