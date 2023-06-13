@@ -23,7 +23,7 @@ function App() {
           message: 'Sending cart data!',
         })
       )
-      const response  = await fetch('https://redux-toolkit-55992-default-rtdb.firebaseio.com/cart.json',
+      const response  = await fetch('https://im-donkey-default-rtdb.firebaseio.com/cart.json',
       {
         method: 'PUT',
         body: JSON.stringify(cart),
