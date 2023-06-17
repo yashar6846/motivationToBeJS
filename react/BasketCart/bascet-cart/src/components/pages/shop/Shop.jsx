@@ -2,9 +2,10 @@ import { FatchData } from '../../FatchData'
 import { Product } from './Product'
 
 import './shop.css'
-import { Data } from '../../../data/DATA'
+// import { Data } from '../../../data/DATA'
 export const Shop = (props) => {
     const{countres}=FatchData()
+    // console.log(countres);
   return (
     <>
     <div className='shop'>
@@ -13,7 +14,7 @@ export const Shop = (props) => {
             </div>
      <div className='products'>
         {countres.map((produc)=>(
-           <Product data={produc}/> 
+           <Product key={produc.id} data={produc}/> 
         ))}
      </div>
     </div>

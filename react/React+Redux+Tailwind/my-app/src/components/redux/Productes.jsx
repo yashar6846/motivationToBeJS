@@ -22,7 +22,6 @@ export const productsDetilReducer = (state = { product:{}},action)=>{
 
 export const cardReducer = (state = {cardItems: []},action)=>{
     switch(action.type){
-
         case"ADD_CARD":
         const item = action.payload
         const existItems=state.cardItems.find(x=>x.id === item.id)

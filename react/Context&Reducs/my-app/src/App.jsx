@@ -13,11 +13,10 @@ import Products from "./componentRedux/Products";
         <img
           src="https://avatars3.githubusercontent.com/u/60869810?v=4"
           alt="React Dersleri"
-        />{" "}
+        />
         React Dersleri
       </h1>
      <>
-
       <BrowserRouter>
       <Routes>
       <Route exact path="/" element={<Products />} />

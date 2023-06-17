@@ -3,7 +3,7 @@ export const FatchData = () => {
     const [countres, setCountres]=useState([])
     useEffect(()=>{
         const fatchMeals =  async() =>{
-        const res = await fetch(`http://localhost:2000/shop`)
+        const res = await fetch(`http://localhost:2001/shop`)
         const resData = await res.json()
         
         const loadedMeals = []

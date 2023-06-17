@@ -18,7 +18,7 @@ export const Cart = () => {
       {
        Data.map((item)=>{
       if(cartItems[item.id]!== 0){
-       return <CartItems data={item} />
+       return <CartItems key={item.id} data={item} />
       }
        })
      }

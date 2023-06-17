@@ -1,16 +1,17 @@
-import { createContext, useEffect, useState } from "react";
-import { Data } from '../../data/DATA'
+import { createContext, useState } from "react";
+// import { Data } from '../../data/DATA'
 import { FatchData } from "../FatchData";
 export const ShopContext = createContext(null);
-// const Data = FatchData //countres
+    const  {countres} =FatchData([]) //countres
+
 const getDefaultCart = () => {
   let cart = {};
-  for (let i = 1; i < Data.length + 1; i++) {
+  for (let i = 1; i < countres.length + 1; i++) {
     cart[i] = 0;
   }
   return cart;
 };
-
+console.log(countres);
 export const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
 
@@ -18,7 +19,7 @@ export const ShopContextProvider = (props) => {
     let totalAmount = 0;
     for (const item in cartItems) {
       if (cartItems[item] > 0) {
-        let itemInfo = Data.find((product) => product.id === Number(item));
+        let itemInfo = countres.find((product) => product.id === Number(item));
         totalAmount += cartItems[item] * itemInfo.price;
       }
     }

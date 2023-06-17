@@ -4,6 +4,7 @@ import { FetchData } from './components/Cart/FetchData';
 import Header from './components/Layout/Header';
 import { MealsSummary } from './components/Meals/MealsSummary';
 import CartProvider from './components/store/CartProvide';
+import { Nima } from './components/UI/mpty';
 
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
@@ -22,6 +23,7 @@ function App() {
       <MealsSummary />
      </main>
      <FetchData />
+     
      </CartProvider>
      
   );

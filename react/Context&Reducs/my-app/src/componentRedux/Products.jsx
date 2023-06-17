@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { sepetEkle } from "./actions";
+import { sepetEkle} from "./actions";
 const Products = props => {
   // console.log(props.cart);
     const totalCount = props.cart.reduce(

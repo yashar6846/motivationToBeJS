@@ -36,12 +36,13 @@ export const EditToy=()=>{
             imageurl: imageurl.current.value
         },
     }).then(()=>{
-        navigate("/")
+        navigate("/home")
     });
     }
     return(
         <>
         <Navbar />
+        
         <h2>formes</h2>
           <label>Name</label>
           <input type="text" ref={name} />

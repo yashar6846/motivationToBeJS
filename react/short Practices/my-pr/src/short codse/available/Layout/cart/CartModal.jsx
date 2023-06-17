@@ -5,17 +5,16 @@ import { CartContex } from '../../shard/Contex';
 import CartItem from './CartItem';
 
 const Cart = (props) => {
-
     const [cartItems, setCartItems]=useContext(CartContex)
     const hasItem = cartItems.length > 0;
 
     const cartRemoveHandler=(id)=>{
-
+       
     }
 
     const cartItemsAddHandler=(item)=>{
-  
-    }
+      
+    } 
 
     const resulte = <ul className={classes['cart-items']}>
         {cartItems.map((item)=> 

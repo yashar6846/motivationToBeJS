@@ -7,8 +7,6 @@ const Caert = () => {
     const dispatch= useDispatch()
     const {cardItems} = useSelector(state=>state.card)
 
-    console.log(cardItems);
-
     const deleteCart=(id)=>{
       dispatch(removeCard(id))
     }

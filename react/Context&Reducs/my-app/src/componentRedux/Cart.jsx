@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-
+import { deleteCart,increment } from "./actions";
 const Cart = (props) => {
+  console.log(props.incres);
  const  totalCartAmount = props.cart.reduce(
   (total, book)=> (total += book.price),0)
   .toFixed(2)
@@ -12,7 +13,7 @@ const Cart = (props) => {
   return (
     <div>
       <h2>
-        <Link to="/">Kitap Listesi</Link> <span>Sepetim({totalCount})</span>
+        <Link to="/">Kitap Listesi</Link> <span>Sepetim()</span>
       </h2>
 
       <h3>Toplam Sepet Tutarı:{totalCartAmount}</h3>
@@ -26,7 +27,7 @@ const Cart = (props) => {
           <p>Toplam: &#8378;{(book.price*book.count).toFixed(2)}</p>
           <p>Sepetinizde bu kitaptan toplam {book.count} adet var.</p>
           <button onClick={()=> props.decrement(book.id)}>-</button>
-          <button onClick={()=> props.removeFromCart(book.id)}>Sepetten Çıkar</button>
+          <button onClick={()=> props.deleteCart(book.id)}>Sepetten Çıkar</button>
           <button onClick={()=> props.increment(book.id)}>+</button>
             </div>
           </div>
@@ -36,7 +37,9 @@ const Cart = (props) => {
 };
 const mapStateToProps = (state) => {
   return {
-    cart: state.cart
+    cart: state.cart,
+    remove: state.cart,
+    incres: state.cart
   }
 }
-export default connect(mapStateToProps)(Cart);
+export default connect(mapStateToProps,{deleteCart,increment})(Cart);

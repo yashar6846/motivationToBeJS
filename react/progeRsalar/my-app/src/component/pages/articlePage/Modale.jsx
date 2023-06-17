@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 
 export const Modale=({closeModal})=>{
- const naviget=   useNavigate()
+ const naviget=useNavigate()
     return (
         <>
          <div className="title">
@@ -12,7 +12,7 @@ export const Modale=({closeModal})=>{
         </div>
         <div className="">
             <button onClick={()=> naviget('/')}>Cancel</button>
-            <button onClick={()=> closeModal(false)}>Yese</button>
+            <button onClick={()=> closeModal(true)}>Yese</button>
         </div>
         </>
     )

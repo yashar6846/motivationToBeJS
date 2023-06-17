@@ -9,7 +9,7 @@ export const Home = () => {
   useEffect(()=>{
     dispatch(productsAction())
   },[dispatch])
-  console.log("Product",products);
+ 
   return (
     <div className="flex flex-wrap justify-center">
     {
