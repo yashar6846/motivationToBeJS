@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 function postPage({posts}) {
   return(
     <>
@@ -6,7 +8,9 @@ function postPage({posts}) {
         posts.map((post)=>{
          return(
             <div key={post.id}>
-            <p>{post.id}+{post.title}</p>
+           <Link href={`posts/${post.id}`} passHref>
+           <h2>{post.id}+{post.title}</h2>
+           </Link>
         </div>
          )
         })

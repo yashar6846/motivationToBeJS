@@ -4,10 +4,13 @@ function Home(){
     return(
        <>
         <h1>Home page</h1>
-        <Link href='/users'>
-      
+       <div>
+       <Link href='/users'>
             users page
-        
+        </Link>
+       </div>
+        <Link href='/posts'>
+            Post page
         </Link>
        </>
     )
