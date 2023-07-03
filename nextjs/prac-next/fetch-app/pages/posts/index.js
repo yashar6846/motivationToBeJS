@@ -1,33 +1,37 @@
-import Link from "next/link"
+import Link from "next/link";
 
-function postPage({posts}) {
-  return(
+function postPage(props) {
+  const {posts} = props;
+  return (
     <>
-    <h1>Poste pages</h1>
-     {
-        posts.map((post)=>{
-         return(
-            <div key={post.id}>
-           <Link href={`posts/${post.id}`} passHref>
-           <h2>{post.id}+{post.title}</h2>
-           </Link>
-        </div>
-         )
-        })
-     }
+      <h1>Poste pages</h1>
+      {posts.map((post) => {
+        return (
+          <div key={post.id}>
+            <Link href={`/posts/${post.id}`}>
+              <h2>
+                {post.id}+{post.title}
+              </h2>
+            </Link>
+          </div>
+        );
+      })}
     </>
-  )  
+  );
 }
 
-export default postPage
+export default postPage;
 
 export async function getStaticProps() {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts`)
-    const data = await res.json()
+  const res = await fetch(`https://im-donkey-default-rtdb.firebaseio.com/productes.json`);
+  const data = await res.json();
 
-    return{
-        props:{
-            posts: data.slice(0, 3)
-        }
-    }
+  return {
+    props: {
+      posts: data //.slice(0, 3),
+    },
+  };
 }
+
+
+

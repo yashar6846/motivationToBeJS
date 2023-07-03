@@ -2,7 +2,7 @@
 const User = ({user}) => {
   return (
     <>
-      <p>{user.name}</p>
+      <p>{user.title}</p>
       <hr />
       <p>{user.email}</p>
       <p>{user.username}</p>                          
