@@ -1,16 +1,16 @@
 import Link from "next/link";
 
 function postPage(props) {
-  const {posts} = props;
+  const {post} = props;
   return (
     <>
       <h1>Poste pages</h1>
-      {posts.map((post) => {
+      {post.map((pos) => {
         return (
-          <div key={post.id}>
-            <Link href={`/posts/${post.id}`}>
+          <div key={pos.id}>
+            <Link href={`/posts/${pos.id}`}>
               <h2>
-                {post.id}+{post.title}
+                {post.id}+{pos.title}
               </h2>
             </Link>
           </div>
@@ -28,7 +28,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      posts: data //.slice(0, 3),
+      post: data, //.slice(0, 3),
     },
   };
 }

@@ -1,10 +1,26 @@
 {
+ 
    "products":[
         {
           "id": 1,
+          "text": "This is the first comment",
           "title": "product 1",
           "price": "1000",
           "description": "descripton 1"
+        },
+        {
+          "id": 2,
+          "text": "This is the first comment",
+          "title": "product 2",
+          "price": "130",
+          "description": "descripton 2"
+        },
+        {
+          "id": 3,
+          "text": "This is the first comment",
+          "title": "product 3",
+          "price": "2000",
+          "description": "descripton 3"
         }
     ]
 }

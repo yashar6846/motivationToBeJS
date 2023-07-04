@@ -11,24 +11,14 @@ const Product = ({product}) => {
       <h3>
         {product.id} + {product.title} + {product.price}
       </h3>
-      <p>{product.descripton}</p>
+      <p>{product.description}</p>
     </>
   );
 };
 
 export default Product;
 
-export async function getStaticPaths() {
-  return {
-    paths: [
-      {
-        params: { postId: "1" },
-      },
-    ],
-    fallback: true,
-    
-  };
-}
+
 
 export async function getStaticProps(context) {
   const { params } = context;
@@ -44,3 +34,20 @@ export async function getStaticProps(context) {
     },
   };
 }
+
+export async function getStaticPaths() {
+    return {
+      paths: [
+        {
+          params: {productId: "1" },
+        },
+        {
+          params: { productId: "2" },
+        },
+      ],
+      fallback: true,
+    //   fallback: "blocking",
+      
+    };
+    revalidate : 10
+  }

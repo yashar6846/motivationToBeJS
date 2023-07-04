@@ -8,6 +8,7 @@ function productList({ product}){
               <h3>
                {product.id} + {product.title} + {product.price}
               </h3>
+              {/* <p>{product.description}</p> */}
             </div>
           )
         })
@@ -28,3 +29,6 @@ function productList({ product}){
       }
     }
   }
+
+
+
