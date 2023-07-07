@@ -9,7 +9,6 @@ function CommentsPage() {
   }
   return (
     <>
-    <hr />
     <button onClick={fetchComments}>Load comments</button>
     {comments.map(comment => {
       return (

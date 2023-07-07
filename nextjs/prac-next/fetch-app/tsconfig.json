@@ -31,7 +31,7 @@
     "pages/api/[rest].js",
     "pages/reste/index.js",
     ".next/types/**/*.ts"
-  ],
+, "pages/api/index.js"  ],
   "exclude": [
     "node_modules"
   ]

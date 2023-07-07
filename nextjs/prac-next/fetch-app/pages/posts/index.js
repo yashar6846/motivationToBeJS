@@ -8,9 +8,9 @@ function postPage(props) {
       {post.map((pos) => {
         return (
           <div key={pos.id}>
-            <Link href={`/posts/${pos.id}`}>
+            <Link href={`/posts/${postId.id}`}>
               <h2>
-                {post.id}+{pos.title}
+                {pos.id}+{pos.title}
               </h2>
             </Link>
           </div>
